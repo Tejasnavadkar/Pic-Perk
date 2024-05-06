@@ -1,0 +1,17 @@
+<% include ./partials/header.ejs %>
+
+<div class="container mx-auto p-10">
+    <div class="grid grid-cols-1 flex items-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <% user.boards.forEach(function(elem){ %>
+            <div class="bg-white rounded-lg overflow-hidden  shadow-md">
+                <img class="w-full object-cover" src="/images/uploads/<%= elem.image %>" alt="">
+                <div class="p-4 flex items-center justify-between ">
+                    <a href="/board/<%= elem._id %>" class="text-lg text-gray-800 font-semibold block mb-2"><%= elem.title %></a>
+                     <a href="/removepin/<%= elem._id %>" class="text-sm tex-black"><i class="ri-delete-bin-2-line"></i></a>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</div>
+
+<% include ./partials/footer.ejs %>

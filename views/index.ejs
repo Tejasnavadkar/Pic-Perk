@@ -1,0 +1,22 @@
+<% include ./partials/header.ejs %>
+
+  <div class="w-full  h-screen bg-center bg-cover bg-zinc-300  lg:bg-[url('https://images.unsplash.com/photo-1650034501785-1eacf6564f15?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] flex items-center justify-center">
+    <div class="w-full max-w-md bg-white px-10 py-8 lg:px-10 rounded-[30px] mx-3 my-7 ">
+        <h1 class="md:text-3xl text-xl  mb-8 font-semibold text-zinc-700 tracking-tighter capitalize leading-none text-center">Welcome to PicPerk</h1>
+        <%if(error.length > 0){%>
+          <p class="text-red-700" ><%=error%></p>
+        <%}%>
+        <form action="/login" method="post">
+            <input class="block border-2 rounded-md mt-2 w-full px-3 py-2" type="text" name="username" placeholder="Username">
+            <input class="block border-2 rounded-md mt-4 w-full px-3 py-2" type="password" name="password" placeholder="Password">
+            <!-- <a class="block mt-3 font-semibold text-zinc-500 text-right" href="#">Forgot password?</a> -->
+            <input class="block border-2 rounded-full md:mt-4 mt-3 w-full px-3 py-2 bg-red-600 text-white font-semibold" type="submit" value="Login">
+            <p class="text-xs font-semibold text-zinc-700 mt-5 text-center">By continuing, you agree to PicPerk's Terms of Service; Notice at collection;</p>
+        </form>
+        <a href="/register" class="block mt-5 text-sm font-semibold text-zinc-700 text-center">Don't have an account? Sign up</a>
+    </div>
+</div>
+
+
+
+<% include ./partials/footer.ejs %>
