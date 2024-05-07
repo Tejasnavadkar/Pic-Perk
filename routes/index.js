@@ -6,6 +6,16 @@ const boardModel = require('./boards')
 const passport = require('passport');
 const port = "3000"
 
+const app = require('../app')
+const cors = require('cors')
+const corsConfig = {
+    origin:"*",
+    credential: true,
+    methods:["GET","POST","PUT","DELETE"],
+};
+app.options("",cors(corsConfig));
+app.use(cors(corsConfig));
+
 const localStrategy = require('passport-local');
 passport.use(new localStrategy(userModel.authenticate()));
 const upload = require('./multer');
