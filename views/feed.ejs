@@ -1,19 +1,4 @@
 <% include ./partials/header.ejs %>
-<!-- <div class="w-full  bg-zinc-800 px-10 py-8 text-white ">
-    <div class=" cards flex flex-wrap gap-10  ">
-        <% posts.forEach(function(elem){ %>
-            <div class="card w-80 m-auto">
-                <div class=" w-full bg-zinc-700  rounded-lg overflow-hidden  ">
-                    <img class=" w-full  object-cover" src="/images/uploads/<%= elem.image %>" alt="">
-                </div>
-                <a href="/post/<%= elem._id %>" class="mt-2 text-sm"><%= elem.title %></a>
-                <h6 class="text-xs font-semibold opacity-50">@<%= elem.user.username%></h6>
-               
-            </div>
-        <% }) %>
-       
-    </div>
-</div> -->
 
 <div class="container  mx-auto p-10">
     <div class="grid grid-cols-1  flex items-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
