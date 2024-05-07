@@ -6,7 +6,12 @@ const boardModel = require('./boards')
 const passport = require('passport');
 const app = require('../app')
 const cors = require('cors')
-app.use(cors());
+const corsConfig = {
+    origin:"*",
+    credential: true,
+    methods:["GET","POST","PUT","DELETE"],
+}
+app.use(cors(corsConfig));
 
 const localStrategy = require('passport-local');
 passport.use(new localStrategy(userModel.authenticate()));
