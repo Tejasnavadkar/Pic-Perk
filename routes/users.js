@@ -28,3 +28,14 @@ const userSchema = new mongoose.Schema({
 userSchema.plugin(plm); // now we can use serialize and deserialzeuser
 
 module.exports = mongoose.model("user",userSchema);
+
+
+// const app = require('../app')
+// const cors = require('cors')
+// const corsConfig = {
+//     origin:"*",
+//     credential: true,
+//     methods:["GET","POST","PUT","DELETE"],
+// };
+// app.options("",cors(corsConfig));
+// app.use(cors(corsConfig));
