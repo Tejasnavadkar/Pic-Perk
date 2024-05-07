@@ -4,6 +4,9 @@ const userModel = require('./users');
 const postModel = require('./post');
 const boardModel = require('./boards')
 const passport = require('passport');
+const app = require('../app')
+const cors = require('cors')
+app.use(cors());
 
 const localStrategy = require('passport-local');
 passport.use(new localStrategy(userModel.authenticate()));
