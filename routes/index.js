@@ -4,7 +4,7 @@ const userModel = require('./users');
 const postModel = require('./post');
 const boardModel = require('./boards')
 const passport = require('passport');
-const port = "3000"
+// const port = "3000"
 
 
 
