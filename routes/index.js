@@ -6,7 +6,7 @@ const boardModel = require('./boards')
 const passport = require('passport');
 // const port = "3000"
 // const app = require('../app')
-// const cors = require('cors')
+const cors = require('cors')
 // const corsConfig = {
 //     origin:"*",
 //     credential: true,
