@@ -1,8 +1,10 @@
 const mongoose = require('mongoose');
 // const passport = require('passport');
 const plm = require('passport-local-mongoose')
+require('dotenv').config()
 
-mongoose.connect("mongodb://127.0.0.1:27017/pin");
+mongoose.connect(process.env.MONGO_URL);
+
 
 const userSchema = new mongoose.Schema({
   username: String,
