@@ -5,7 +5,7 @@ const postModel = require('./post');
 const boardModel = require('./boards')
 const passport = require('passport');
 // const port = "3000"
-// const app = require('../app')
+const app = require('../app')
 const cors = require('cors')
 // const corsConfig = {
 //     origin:"*",
@@ -13,7 +13,7 @@ const cors = require('cors')
 //     methods:["GET","POST","PUT","DELETE"],
 // };
 // app.options("",cors(corsConfig));
-// app.use(cors(corsConfig));
+app.use(cors());
 
 
 const localStrategy = require('passport-local');
