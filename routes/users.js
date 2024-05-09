@@ -3,17 +3,17 @@ const mongoose = require('mongoose');
 const plm = require('passport-local-mongoose')
 
 
-const connectDB = async () =>{
-  try {
-   const conn = await mongoose.connect("mongodb+srv://tejasnavadkar:tejas@cluster0.3qgh0ao.mongodb.net/pin?retryWrites=true&w=majority&appName=Cluster0");
-   console.log(`MongoDB Connected:${conn.connection.host}`)
-  } catch (error) {
-    console.log(error);
-    process.exit(1);
-  }
-}
+// const connectDB = async () =>{
+//   try {
+//    const conn = await mongoose.connect("mongodb+srv://tejasnavadkar:tejas@cluster0.3qgh0ao.mongodb.net/pin?retryWrites=true&w=majority&appName=Cluster0");
+//    console.log(`MongoDB Connected:${conn.connection.host}`)
+//   } catch (error) {
+//     console.log(error);
+//     process.exit(1);
+//   }
+// }
 
-connectDB()
+// connectDB()
 
 
 
