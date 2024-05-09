@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 // const passport = require('passport');
 const plm = require('passport-local-mongoose')
-require('dotenv').config()
 
-mongoose.connect(process.env.MONGO_URL);
+
+mongoose.connect("mongodb+srv://tejasnavadkar:tejas@cluster0.3qgh0ao.mongodb.net/pin?retryWrites=true&w=majority&appName=Cluster0");
 
 
 const userSchema = new mongoose.Schema({
