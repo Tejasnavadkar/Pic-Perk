@@ -9,7 +9,7 @@ const passport = require('passport');
 const mongoose = require('mongoose');
 const connectDB = async () =>{
   try {
-   const conn = await mongoose.connect("mongodb+srv://tejasnavadkar:tejas@cluster0.3qgh0ao.mongodb.net/pin?retryWrites=true&w=majority&appName=Cluster0");
+   const conn = await mongoose.connect("mongodb://127.0.0.1:27017/pin");
    console.log(`MongoDB Connected:${conn.connection.host}`)
   } catch (error) {
     console.log(error);
