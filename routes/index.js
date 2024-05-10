@@ -7,16 +7,31 @@ const passport = require('passport');
 // const port = "3000"
 
 const mongoose = require('mongoose');
-const connectDB = async () =>{
-  try {
-   const conn = await mongoose.connect("mongodb://127.0.0.1:27017/pin");
-   console.log(`MongoDB Connected:${conn.connection.host}`)
-  } catch (error) {
-    console.log(error);
-    process.exit(1);
-  }
-}
-connectDB()
+
+// const connectDB = async () =>{
+//   const DB = "mongodb+srv://tejasnavadkar:tejas@cluster0.3qgh0ao.mongodb.net/pin?retryWrites=true&w=majority&appName=Cluster0"
+//  await mongoose.connect(DB,{
+    // useNewUrlParser:true,
+    // useCreateIndex:true,
+    // useUnifiedTopology:true,
+    // useFindAndModify:false
+//   }).then(() =>{
+//     console.log('connection successful');
+//   }).catch((err) => console.log('no connection'))
+  
+// }
+
+// connectDB()
+// const connectDB = async () =>{
+//   try {
+//    const conn = await mongoose.connect("mongodb://127.0.0.1:27017/pin");
+//    console.log(`MongoDB Connected:${conn.connection.host}`)
+//   } catch (error) {
+//     console.log(error);
+//     process.exit(1);
+//   }
+// }
+// connectDB()
 
 var app = express()
 const cors = require('cors')
@@ -194,7 +209,7 @@ router.post('/createpost', isLoggedIn, upload.single("postimage") ,async functio
     user:user._id,
     title:req.body.title,
     description:req.body.description,
-    image:req.file.filename
+    image:req.file?.filename
   
   })
   user.posts.push(post._id);
